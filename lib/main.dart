@@ -16,8 +16,9 @@ class MyApp extends StatelessWidget {
     codigo: 1,
     login: "Rodolfo123",
     nome: "Rodolfo",
-    senha: "@senhaforte123"
+    senha: "@senhaforte123",
     );
+
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
@@ -27,11 +28,11 @@ class MyApp extends StatelessWidget {
           child: Padding(padding: const EdgeInsets.all(18.0),
             child: Column(
                 children: [
-                  Text("Nome: ${u.nome}"),
-                  Text("Código: ${u.codigo}"),
-                  Text("Login: ${u.login}"),
-                  Text("Senha ${u.senha}")
-                ],
+                  Text("Nome:"),
+                  Text("Código: "),
+                  Text("Login"),
+                  Text("Senha"),
+                ]
             ),
           ),
         ),
