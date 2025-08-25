@@ -20,23 +20,8 @@ class MyApp extends StatelessWidget {
     );
 
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-            title: const Text("Meus Dados:")
-        ),
-        body: Center(
-          child: Padding(padding: const EdgeInsets.all(18.0),
-            child: Column(
-                children: [
-                  Text("Nome:"),
-                  Text("Código: "),
-                  Text("Login"),
-                  Text("Senha"),
-                ]
-            ),
-          ),
-        ),
-      ),
+      debugShowCheckedModeBanner:false,
+      home: TelaLogin(),
     );
   }
 }
