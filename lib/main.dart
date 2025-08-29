@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'tela_login.dart';
+import 'tela_login.dart';
+
 import 'usuario.dart';
+//import 'restaurante.dart';
+//import 'tipo.dart';
 
 void main() {
   runApp(const MyApp());
@@ -8,21 +13,14 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
 
-    Usuario u = Usuario(
-    codigo: 1,
-    login: "Rodolfo123",
-    nome: "Rodolfo",
-    senha: "@senhaforte123",
-    );
 
     return MaterialApp(
       debugShowCheckedModeBanner:false,
       home: TelaLogin(),
-    );
+    ); //MaterialApp
   }
 }
 
