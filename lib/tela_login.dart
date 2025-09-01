@@ -6,11 +6,7 @@ import 'usuario.dart';
 class Telalogin extends StatelessWidget{
   Telalogin({super.key});
 
-/*Usuario u = Usuario(
-   nome: 'admin´
-   login: 'admin'
-   senha: '1234´
-  );*/
+
 
   final TextEditingController usuarioController = TextEditingController();
   final TextEditingController senhaController = TextEditingController();
@@ -30,7 +26,8 @@ class Telalogin extends StatelessWidget{
           const SizedBox(height: 20),
           TextField(
             decoration: const InputDecoration(labelText: 'Senha'),
-            obscureText:true
+            obscureText:true,
+              controller:senhaController,
           ),
           const SizedBox(height: 20),
           ElevatedButton(onPressed: () async{
