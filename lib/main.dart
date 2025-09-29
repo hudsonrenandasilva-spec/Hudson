@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'tela_login.dart';
-import 'tela_login.dart';
+import 'package:tela_login.dart';
 
 import 'usuario.dart';
 //import 'restaurante.dart';
