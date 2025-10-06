@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'banco/usuario_dao.dart';
 import 'tela_home.dart';
 import 'usuario.dart';
+import 'banco/usuario_dao.dart';
 
 class Telalogin extends StatelessWidget{
   Telalogin({super.key});
@@ -41,7 +42,7 @@ class Telalogin extends StatelessWidget{
               print('deu errado nao vai abri outra pagina');
             }*/
 
-    final sucesso = await UsuarioDAO.autenticar(usuarioController.text, senhaController.text);
+    final sucesso = await UsuarioDao.autenticar(usuarioController.text, senhaController.text);
 
     if(sucesso){
     Navigator.push(context,
@@ -61,6 +62,9 @@ class Telalogin extends StatelessWidget{
     ),
     );
   }
+}
+
+class UsuarioDAO {
 }
 
 
