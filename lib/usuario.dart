@@ -4,31 +4,30 @@ class Usuario{
   String? _login;
   String? _senha;
 
-  Usuario({String? nome, int? codigo, String? senha, String? login}){
-    _senha = senha;
+  Usuario({int? codigo,String? senha,String? login, String? nome}){
     _codigo = codigo;
-    _nome = nome;
     _login = login;
+    _nome = nome;
+    _senha = senha;
   }
 
-  //gettes
-//escrita do get tradicional
-String? get login{
+  //getters
+  //exemplo tradicional
+  String? get login{
     return _login;
-}
-//escrita do get no estilo dart
-String? get nome => _nome;
-  String? get senha => _senha;
+  }
+  //metodo get  ao estilo dart
   int? get codigo => _codigo;
+  String? get nome=> _nome;
+  String? get senha => _senha;
 
   //setters
-//escrita do set tradicional
-set login(String? login){
-  _login = login;
-}
-//escrita do set no estilo dart
-set nome(String? nome) => _nome = nome;
-set senha(String? senha) => _senha = senha;
-set codigo(int? codigo) => _codigo= codigo;
-
+  //setter tradicional
+  set login(String? login){
+    _login = login;
+  }
+  //metodo set ao estilo dart
+  set nome(String? nome) => _nome = nome;
+  set codigo(int? codigo) => _codigo = codigo;
+  set senha(String? senha) => _senha = senha;
 }
