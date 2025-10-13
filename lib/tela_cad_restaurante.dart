@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:mimpedir/tipo.dart';
 
-class TelaCadRestaurante extends StatelessWidget{
-  TelaCadRestaurante({super.key});
+import 'banco/restaurante_dao.dart';
+
+class TelaCadRestaurante extends StatelessWidget {
+  @override
+  }
+
+  return TelaCadRestauranteState();
+}
 
   @override
   Widget build(BuildContext context) {
@@ -35,11 +42,16 @@ class TelaCadRestaurante extends StatelessWidget{
         validator: (String? value){},
       ),
       SizedBox(height: 50),
-      ElevatedButton(onPressed: (){}, child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children:[
-          Icon(Icons.save),
-          Text("cadastrar")
+      onPressed:() async{
+      final sucesso = await restauranteDAO.cadastrarRestaurante(
+      nomeController.text, latitudeController.text, longitudeController.text, tipoCulinaria);
+      String msg = 'Erro não encontrado. Verifique os dados.';
+      Color corFundo = Colors.red;
+
+      if(sucesso> 0){
+        msg ='"${nomeController.text}"'
+    }
+      )
         ],
       ))
         ],
